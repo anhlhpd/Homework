@@ -1,0 +1,43 @@
+header{
+	font-family: indie flower;
+	background: grey;
+	color: white;
+	text-align: center;
+	font-size: 50px;
+}
+
+footer{
+	font-family: indie flower;
+	background: grey;
+	color: white;
+	text-align: center;
+	font-size: 20px;
+}
+
+body{
+	font-family: century;
+	background-color: #f1fbf1; 
+}
+
+img{
+	width: 50%;
+}
+
+nav{
+	float: left;
+	width: 10%;
+	padding: 10%;
+}
+
+nav ul{
+	list-style-type: none;
+}
+
+article{
+	padding: 10%;
+	margin-left: 20%;
+}
+
+a:hover{
+	color: green;
+}
