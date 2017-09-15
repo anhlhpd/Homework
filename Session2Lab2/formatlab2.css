@@ -1,0 +1,20 @@
+body{
+	font-size: 11px;
+	font-family: Tahama;
+}
+
+color{
+	color: red;
+}
+
+#c1{
+	color: green;
+}
+
+list{
+	list-style-type: circle;
+}
+
+ul{
+	font-family: Consolas;
+}
