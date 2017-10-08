@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 8</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="form.js"></script>
+</head>
+<body>
+	<form action="https://youtube-api-challenger.appspot.com/member/register" method="post">
+	<fieldset>
+		<legend>Thông tin cơ bản</legend>
+		<label>
+			Tên tài khoản
+			<input type="text" name="username" placeholder="Tài khoản đăng nhập." required class="long-input">
+		</label><br>
+		<label>
+			Email
+			<input type="Email" name="email" placeholder="Email của bạn." required class="long-input">
+		</label><br>
+		<label>
+			Mật khẩu
+			<input type="password" name="Mật khẩu" placeholder="Mật khẩu đăng nhập." required class="long-input">
+		</label><br>
+		<label>
+			Xác nhận mật khẩu
+			<input type="password" name="password" placeholder="Nhập lại mật khẩu." required class="long-input">
+		</label><br>
+	</fieldset>
+
+	<fieldset>
+		<legend>Thông tin chi tiết</legend>
+		<label>
+			Họ và tên
+			<input type="text" name="fullName" placeholder="Họ và tên của bạn." class="long-input">
+		</label><br>
+		<label>
+			Ngày sinh
+			<input type="date" name="birthDay" placeholder="mm/dd/yyyy">
+		</label><br>
+		<label required>
+			Giới tính
+			<input type="radio" name="gender" value="1" checked required>Nam
+			<input type="radio" name="gender" value="0">Nữ
+		</label><br>
+		<label>
+			Sở thích
+			<input type="checkbox" name="favourite" value="Thể thao">Thể thao
+			<input type="checkbox" name="favourite" value="Xem phim">Xem phim
+			<input type="checkbox" name="favourite" value="Nghe nhạc">Nghe nhạc
+			<input type="checkbox" name="favourite" value="Đọc sách">Đọc sách
+		</label><br>
+		<label>
+			Ảnh đại diện
+			<input type="file" name="avatar">
+		</label><br>
+		<label>
+			Giới thiệu về bản thân
+			<textarea name="introduce"></textarea>
+		</label>
+	</fieldset>
+	<button name="submit">Đăng ký</button>
+	<button name="Làm lại">Làm lại</button>
+	</form>
+</body>
+</html>
