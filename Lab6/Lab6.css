@@ -24,7 +24,8 @@
     [class*="col-"] {
         width: 100%;
     }
-
+}
+	
 .logo {
 	float:left;
 	display: inline-block;
