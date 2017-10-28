@@ -1,0 +1,258 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+header {
+	background-image: url("http://40.media.tumblr.com/cb742b20d5366f686c0680a6d2c58fc8/tumblr_nh66n6309z1sh8nmro1_500.jpg");
+	color: white;
+	height: 130px;
+	margin: 0;
+}
+
+.logo {
+	float: left;
+	width: 10%;
+}
+
+.logo img {
+	float: left;
+	height: 100px;
+	margin-left: 80px;
+	margin-top: 30px;
+}
+
+.logo-text {
+	float: left;
+	margin-left: 50px;
+	margin-top: 18px;
+	width: 65%;
+	text-align: center;
+	color: white;
+	font-size: 80px;
+	font-family: 'Caveat Brush', cursive;
+}
+
+.menu {
+	float: right;
+	display: inline;
+	width: 18%;
+	margin-top: 10px;
+	text-align: center;
+	font-family: 'Caveat Brush', cursive;
+}
+
+.menu li {
+	display: inline;
+	font-size: 20px;
+}
+
+.menu li a {
+	color: white;
+	text-decoration: none;
+}
+
+.menu li a:hover {
+	color: #d9b3ff;
+	font-weight: bolder;
+}
+
+#search {
+	width: 150px;
+	background-color: #fff;
+}
+
+.search {
+	width: 80px;
+	background-color: #fff;
+}
+
+header::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+nav {
+	margin-bottom: 5px;
+	font-size: 20px;
+	text-align: center;
+	background-color: #0073aa;
+	position: sticky;
+	top: 0px;
+}
+
+nav div {
+	height: 50px;
+}
+
+nav ul {
+	padding-top: 10px;
+	margin-top: 0;
+}
+
+nav ul img {
+	width: 17px;
+}
+
+nav li {
+	list-style-type: none;
+	display: inline;
+}
+
+nav li a {
+	font-family: Tahoma;
+	text-decoration: none;
+	color: #fff;
+	margin: 0 20px;
+}
+
+nav li a:hover {
+	color: red;
+	font-weight: bolder;
+}
+
+fieldset {
+	width: 50%;
+	border-radius: 5%;
+	margin: 0 26%;
+	box-shadow: 10px 10px 30px 10px #e6eeff;
+}
+
+legend {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+form{
+	margin-left: 5%;
+}
+
+label {
+	width: 25%;
+	float: left;
+	font-weight: bold;
+	padding-bottom: 1%;
+}
+
+.validate {
+	width: 35%;
+}
+
+.form-group {
+	padding: 8px;
+}
+
+div input, select {
+	float: left;
+	width: 40%;
+	border: 1px solid black;
+	height: 30px;
+	border-radius: 3px;
+	background-color: #e6f2ff;
+}
+
+.form-group::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+select {
+	left: 150px;
+}
+
+.required {
+	color: red;
+}
+
+.error-msg {
+	display: inline;
+	width: 35%;
+	color: red;
+}
+
+.success-msg {
+	color: green;
+}
+
+.login {
+	width: 25%;
+	background-color: #ccddff;
+}
+
+.login:hover {
+	font-weight: bold;
+	display: inline-block;
+	background-color: #99bbff;
+}
+
+@media only screen and (max-width:750px) {
+  /* For mobile phones: */
+	header {
+	  	height: 100px;
+	 }
+
+ 	.logo img {
+		height: 30px;
+		margin: 65% 0 10% 70%;
+	}
+
+	.logo-text {
+		margin-left: 8%;
+		margin-top: 4%;
+		width: 53%;
+		font-size: 40px;
+	}
+
+	.menu {
+		float: left;
+		width: 25%;
+		margin-top: 0;
+		text-align: left;
+	}
+
+	.menu li {
+		font-size: 13px;
+	}
+
+	nav div {
+		height: 40px;
+	}
+
+	nav ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	nav ul img {
+		width: 10px;
+	}
+
+	nav li a {
+		font-size: 10px;
+		color: #fff;
+		margin: 0 1%;
+	}
+
+	fieldset {
+		width: 86%;
+		margin: 0 10%;
+	}
+
+	form{
+		font-size: 15px;
+		margin-left: 2%;
+	}
+
+	label {
+		width: 28%;
+	}
+
+	div input, select {
+		width: 35%;
+	}
+}
