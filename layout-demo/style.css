@@ -1,0 +1,42 @@
+* {
+	font-family: Tahoma;
+}
+
+header {
+	height: 100px;
+}
+
+footer {
+	height: 80px;
+}
+
+nav {
+	
+}
+
+aside {
+	float: left;
+	width: 20%;
+	background-color: orange;
+}
+
+article {
+	width: 28%;
+	float: left;
+	padding: 10px;
+	margin: 5px;
+	border: 1px solid #e7e7e7;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px #888888;
+}
+
+article .title {
+	font-weight: bolder;
+	color: blue;
+}
+
+main::after {
+	content: "";
+	clear: both;
+	display: table;
+}

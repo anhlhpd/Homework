@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 8</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="form.js"></script>
+	<link rel="stylesheet" type="text/css" href="Lab8(Table).css">
+</head>
+<body>
+	<form action="https://youtube-api-challenger.appspot.com/member/register" method="post">
+	<fieldset><legend>Thông tin cơ bản</legend>
+	<table>
+		<tr>
+		<td>Tên tài khoản</td>
+		<td><input type="text" name="username" placeholder="Tài khoản đăng nhập." required class="normal-input"></td>
+		</tr>
+
+		<tr>
+		<td>Email</td>
+		<td><input type="Email" name="email" placeholder="Email của bạn." required class="normal-input"></td>
+		</tr>
+
+		<tr>
+		<td>Mật khẩu</td>
+		<td><input type="password" name="Mật khẩu" placeholder="Mật khẩu đăng nhập." required class="normal-input"></td>
+		</tr>
+
+		<tr>
+		<td>Xác nhận mật khẩu</td>
+		<td><input type="password" name="password" placeholder="Nhập lại mật khẩu." required class="normal-input"></td>
+		</tr>
+	</table>
+	</fieldset>
+
+	<fieldset><legend>Thông tin chi tiết</legend>
+	<table>
+		<tr>
+			<td>Họ và tên</td>
+			<td><input type="text" name="fullName" placeholder="Họ và tên của bạn." class="long-input"></td>
+		</tr>
+
+		<tr>
+			<td>Ngày sinh</td>
+			<td><input type="date" name="birthDay" placeholder="mm/dd/yyyy"></td>
+		</tr>
+
+		<tr>
+			<td>required>Giới tính</td>
+			<td><input type="radio" name="gender" value="1" checked required>Nam
+			<input type="radio" name="gender" value="0">Nữ</td>
+		</tr>
+
+		<tr>
+			<td>Sở thích</td>
+			<td><input type="checkbox" name="favourite" value="Thể thao">Thể thao
+			<input type="checkbox" name="favourite" value="Xem phim">Xem phim
+			<input type="checkbox" name="favourite" value="Nghe nhạc">Nghe nhạc
+			<input type="checkbox" name="favourite" value="Đọc sách">Đọc sách</td>
+		</tr>
+
+		<tr>
+			<td>Ảnh đại diện</td>
+			<td><input type="file" name="avatar"></td>
+		</tr>
+
+		<tr>
+			<td>Giới thiệu về bản thân</td>
+			<td><textarea name="introduce"></textarea></td>
+		</td>
+	
+		<tr rowspan="2">
+			<td><button name="submit">Đăng ký</button>
+			<button name="Làm lại">Làm lại</button></td>
+	</table>
+	</fieldset>
+	</form>
+</body>
+</html>

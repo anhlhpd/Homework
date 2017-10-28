@@ -1,0 +1,61 @@
+* {
+	box-sizing: border-box;
+}
+
+fieldset {
+	width: 50%;
+	border-radius: 5%;
+}
+
+form{
+	margin-left: 5%;
+	width:80%;
+}
+
+label {
+	width: 30%;
+	float: left;
+	font-weight: bold;
+}
+
+input {
+	float: left;
+}
+
+.form-group {
+	padding: 5px;
+}
+
+div input, select {
+	border: 1px solid black;
+	width: 350px;
+	height: 30px;
+	border-radius: 3px;
+}
+
+.form-group::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+select {
+	left: 150px;
+}
+
+.required {
+	color: red;
+}
+
+.error-msg {
+	color: red;
+}
+
+.success-msg {
+	color: green;
+}
+
+#check{
+	width: 15px;
+	height:15px;
+}

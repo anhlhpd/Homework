@@ -2,6 +2,7 @@ header{
 	font-family: indie flower;
 	background: grey;
 	color: white;
+	font-weight: bold;
 	text-align: center;
 	font-size: 50px;
 }
@@ -11,7 +12,7 @@ footer{
 	background: grey;
 	color: white;
 	text-align: center;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 body{
@@ -20,7 +21,7 @@ body{
 }
 
 img{
-	width: 50%;
+	width: 100%;
 }
 
 nav{
