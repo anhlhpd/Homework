@@ -1,0 +1,13 @@
+<div ng-controller="page1Controller">
+	<directive-name></directive-name>
+	<h1>Hello Page 1</h1>
+	{{helloPage1}}
+	<input type="text" name="" ng-model="globalVariable"></input>
+	<button ng-click="saveGlobal()">Save global</button>
+
+	<form name="myForm">
+		Email <input type="email" name="username" ng-model="username" required>
+		<span style="color: red;" ng-show="!myForm.username.dirty && isValidUsername">Vui lòng nhập username</span>
+		{{myForm.username.$valid}}
+	</form>
+</div>

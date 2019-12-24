@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<fieldset>
+		<legend>Main content</legend>
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+	</fieldset>
+	<ul>
+		<li><a href="#!page1">Page 1</a></li>
+		<li><a href="#!page2">Page 2</a></li>
+		<li><a href="#!page3">Page 3</a></li>
+	</ul>
+	<fieldset>
+		<legend>Thay đổi ở đây</legend>
+		<ng-view></ng-view>
+	</fieldset>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.js"></script>
+	<script type="text/javascript" src="js/my-route.js"></script>
+	<script type="text/javascript" src="js/my-service.js"></script>
+	<script type="text/javascript" src="js/my-controller.js"></script>
+</body>
+</html>

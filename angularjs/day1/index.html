@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>AngularJS day 1</title>
+</head>
+<body ng-controller="myController">
+	<h2>Hello Angular</h2>
+	<div>
+		<form class="form-group">
+			<div class="form-group">
+				<label>RollNumber</label>
+				<input type="text" name="rollNumber" ng-model="student.rollNumber">
+			</div>
+			<div class="form-group">
+				<label>FullName</label>
+				<input type="text" name="fullName" ng-model="student.fullName">
+			</div>
+			<div class="form-group">
+				<label>Email</label>
+				<input type="text" name="email" ng-model="student.email">
+			</div>
+			<div class="form-group">
+				<label>Phone</label>
+				<input type="text" name="phone" ng-model="student.phone">
+			</div>
+			<div class="form-group">
+				<label>Address</label>
+				<textarea ng-model="student.address"></textarea>
+			</div>
+			<div class="form-group">
+				<label>&nbsp;</label>
+				<input type="button" name="submit" value="Submit" ng-click="doClick()">
+				<input type="reset" name="reset" value="Reset">
+			</div>
+		</form>
+	</div>
+
+	
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript">
+		var app = angular.module('myApp', []);
+		app.controller('myController', function($scope){
+			$scope.student = {
+				rollNumber: 'A00124',
+				fullName: 'Xuan Hung',
+				email: 'xuanhung2401@gmail.com',
+				phone: '012345',
+				address: 'Hanoi'
+			};
+			$scope.doClick = function() {
+				alert(JSON.stringify($scope.student));
+			}
+		})
+	</script>
+</body>
+</html>

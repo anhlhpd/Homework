@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<title>Trang chủ</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body ng-controller="homeController">
+	<!-- Top nav -->
+	<div class="row">
+		<nav class="navbar navbar-inverse">
+			<div class="container">
+        		<div class="navbar-header">
+          			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            		<span class="sr-only">Toggle navigation</span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+          			</button>
+          			<a class="navbar-brand" href="index.html">
+						<img src="https://t00.deviantart.net/x1C-PyrOqbzDVNzIM1jt3EFOUwA=/fit-in/700x350/filters:fixed_height(100,100):origin()/pre00/f6fd/th/pre/f/2017/166/f/7/noragami__023__circle_icon_by_tpabookyp-dbcs7i7.png" width="28px">
+					</a>
+          			<a class="navbar-brand" href="#">Anime</a>
+        		</div>
+        		<div id="navbar" class="navbar-collapse collapse">
+          			<ul class="nav navbar-nav">
+            			<li class="active"><a href="#">Home</a></li>
+		            	<li><a href="#about">About</a></li>
+		            	<li class="dropdown">
+			            	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Video <span class="caret"></span></a>
+				              	<ul class="dropdown-menu">
+				                	<li><a href="#">My videos</a></li
+				                	<li role="separator" class="divider"></li>
+				                	<li><a href="#">Add video</a></li>
+				              	</ul>
+            			</li>
+            			<li class="dropdown">
+			            	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Playlist <span class="caret"></span></a>
+				              	<ul class="dropdown-menu">
+				                	<li><a href="#">My playlists</a></li
+				                	<li role="separator" class="divider"></li>
+				                	<li><a href="#">Add playlist</a></li>
+				              	</ul>
+            			</li>
+          			</ul>
+          			<ul class="nav navbar-nav navbar-right" class="ul1 show">
+				    		<li><a href="" data-toggle="modal" data-target="#sign-up" class="in"><span class="glyphicon glyphicon-user"></span> Đăng ký</a></li>
+				    		<li><a href="" data-toggle="modal" data-target="#sign-in" class="in"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
+				    	</ul> -->
+				    	<!-- <ul class="nav navbar-nav navbar-right" class="ul2 hide">
+				    		<li><a href="#"><span class="glyphicon glyphicon-pencil"></span> Chỉnh sửa</a></li>
+				    		<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Đăng xuất</a></li>
+				    	</ul> -->
+				    	<form class="nav navbar-form navbar-right">
+				    		<div class="input-group">
+				    			<input type="text" class="form-control" placeholder="Search" id="keyword">
+				    			<div class="input-group-btn">
+				    				<button type="button" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+				    			</div>
+				    		</div>
+				    	</form>
+        		</div>
+     		</div>
+		</nav>
+	</div>
+	
+	<div class="col-md-3"></div>
+
+	<!-- Video -->
+		<div class="list-video col-md-9">
+		<div class="video-item co-md-3" ng-repeat="item in youtubeItems">
+			<img ng-src="{{item.snippet.thumbnails.medium.url}}">
+			<p>{{item.snippet.title}}</p>
+		</div>
+	</div>
+	<div style="clear: both;"></div>
+
+
+	<!-- Modal dăng ký -->
+	<div class="modal" id="sign-up" tabindex="-1" role="dialog" aria-labelledby="">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="exampleModalLabel">Đăng ký</h4>
+				</div>
+				<div class="modal-body">
+					<form name="signinForm">
+						<div class="form-group">
+							<span class="glyphicon glyphicon-user">&nbsp;</span><label class="control-label">Username</label>
+							<span style="color: red;" ng-show="signinForm.usernameInput.$valid">Vui lòng nhập username!</span>
+							<input type="text" class="form-control" id="usernameInput" name="usernameInput" ng-model="usernameInput" required>
+						</div>
+						<div class="form-group">
+							<span class="glyphicon glyphicon-lock">&nbsp;</span><label class="control-label">Mật khẩu</label>
+							<span style="color: red;" ng-show="signinForm.passwordInput.$valid">Vui lòng nhập username!</span>
+							<input type="password" class="form-control" id="passwordInput" name="passwordInput" ng-model="passwordInput">
+						</div>
+						<div class="form-group">
+							<span class="glyphicon glyphicon-lock">&nbsp;</span><label class="control-label">Nhập lại mật khẩu</label>
+							<span style="color: red;" ng-show="signinForm.repasswordInput.$valid">Vui lòng nhập username!</span>
+							<input type="password" class="form-control" id="repasswordInput" name="repasswordInput" ng-model="repasswordInput">
+						</div>
+						<div class="form-group">
+							<span class="glyphicon glyphicon-envelope">&nbsp;</span><label class="control-label">Email</label>
+							<span style="color: red;" ng-show="signinForm.emailInput.$valid">Vui lòng nhập username!</span>
+							<input type="email" class="form-control" id="emailInput" name="emailInput" ng-model="emailInput">
+						</div>
+						<div class="form-group">
+							<span class="glyphicon glyphicon-pencil">&nbsp;</span><label class="control-label">Tên đầy đủ</label>
+							<span style="color: red;" ng-show="signinForm.fullnameInput.$valid">Vui lòng nhập username!</span>
+							<input type="text" class="form-control" id="fullnameInput" name="fullnameInput" ng-model="fullnameInput">
+						</div>
+						<div class="form-group">
+							<span class="glyphicon glyphicon-dashboard">&nbsp;</span><label class="control-label"  value="0">Ngày sinh</label>
+							<span style="color: red;" ng-show="signinForm.birthDay.$valid">Vui lòng nhập username!</span>
+							<input type="date" id="birthDay" class="form-control" name="birthDay" ng-model="birthDay">
+						</div>
+						<div class="form-group">
+							<span class="glyphicon glyphicon-heart">&nbsp;</span><label class="control-label">Giới tính</label>
+							<p></p>
+							<span style="color: red;" ng-show="signinForm.gender.$valid">Vui lòng nhập username!</span>
+							<select name="gender" ng-model="gender">
+								<option value="-1" selected>Khác</option>
+								<option value="1">Nam</option>
+								<option value="0">Nữ</option>
+							</select>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" name="btn-register">Đăng ký</button>
+					<button type="reset" class="btn btn-default">Làm lại</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Modal đăng nhập -->
+	<div class="modal fade" id="sign-in" tabindex="-1" role="dialog" aria-labelledby="">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="exampleModalLabel">Đăng nhập</h4>
+					</div>
+					<div class="modal-body">
+						<form name="loginForm">
+							<div class="form-group">
+								<span class="glyphicon glyphicon-user">&nbsp;</span><label for="recipient-name" class="control-label">Username</label>
+								<input type="text" class="form-control" name="loginUsername" >
+								<p></p>
+							</div>
+							<div class="form-group">
+								<span class="glyphicon glyphicon-lock">&nbsp;</span><label for="message-text" class="control-label">Mật khẩu</label>
+								<input type="password" class="form-control" name="loginPassword" >
+								<p></p>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" id="btnLogin">Đăng nhập</button>
+						<button type="reset" class="btn btn-default"> Làm lại</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
