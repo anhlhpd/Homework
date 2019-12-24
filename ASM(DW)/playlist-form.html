@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tạo playlist mới</title>
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Petrona" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="logo"><img src="https://t00.deviantart.net/x1C-PyrOqbzDVNzIM1jt3EFOUwA=/fit-in/700x350/filters:fixed_height(100,100):origin()/pre00/f6fd/th/pre/f/2017/166/f/7/noragami__023__circle_icon_by_tpabookyp-dbcs7i7.png"></div>
+		<div class="logo-text">Anime</div>
+		<div class="search-box">Type to search</div>
+		<input type="text" name="keyword" id="keyword" placeholder="Search">
+		<div class="menu">
+			<div><a href="member-form.html">Đăng ký</a>&nbsp;
+				<a href="login.html">Đăng nhập</a></div>
+		</div>
+	</header>
+
+	<aside>
+			<div><a href="index.html">Trang chủ</a></div>
+			<div><a href="video.html">Video của tôi</a></div>
+			<div><a href="list-playlist.html">Playlist</a></div>
+	</aside>
+
+	<div>
+		<fieldset>
+		<legend>Playlist mới</legend>
+		
+		<span class="error-msg" id="total-msg"></span>
+
+		<form id="playlist-form" name="playlist-form">
+			<div class="form-group">
+				<label>Tên playlist</label>
+				<input type="text" name="name" 
+					class="form-control normal-input">				
+				<span class="error-msg"></span>
+			</div>
+
+			<div class="form-group">
+				<label>Mô tả</label>
+				<input type="text" name="description" class="form-control long-input">
+				<span class="error-msg"></span>
+			</div>
+
+			<div class="form-group">
+				<label>Ảnh đại diện</label>
+				<input type="text" name="thumbnailUrl" class="form-control long-input">
+				<span class="error-msg"></span>
+			</div>
+
+			<div class="form-group">
+				<label>&nbsp;</label>
+				<input type="button" name="submit" value="Lưu playlist" 
+					class="form-control btn" id="btnSubmit">
+				<input type="reset" name="reset" value="Làm lại" class="form-control btn">
+			</div>
+		</form>
+	</fieldset>
+	</div>
+
+	<footer></footer>
+	<script type="text/javascript" src="js/playlist-form.js"></script>
+</body>
+</html>
