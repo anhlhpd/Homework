@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Video</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+</head>
+<body>
+	<div class="row">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html">
+							<img src="https://t00.deviantart.net/x1C-PyrOqbzDVNzIM1jt3EFOUwA=/fit-in/700x350/filters:fixed_height(100,100):origin()/pre00/f6fd/th/pre/f/2017/166/f/7/noragami__023__circle_icon_by_tpabookyp-dbcs7i7.png" width="25px">
+						</a>
+						<a class="navbar-brand" href="index.html">Anime</a>
+					</div>
+
+				    <div class="collapse navbar-collapse top-nav">
+				    	<ul class="nav navbar-nav navbar-right" class="in">
+				    		<li><a href="#"><span class="glyphicon glyphicon-user in"></span> Sign Up</a></li>
+				    		<li><a href="#"><span class="glyphicon glyphicon-log-in in"></span> Login</a></li>
+				    	</ul>
+				    	<ul class="out">
+				    		<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
+				    		<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Đăng xuất</a></li>
+				    	</ul>
+				    	<form class="nav navbar-form navbar-right">
+				    		<div class="input-group">
+				    			<input type="text" class="form-control" placeholder="Search" id="keyword">
+				    			<div class="input-group-btn">
+				    				<button type="button" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+				    			</div>
+				    		</div>
+				    	</form>
+				    </div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="row">
+		<div class="nav-side-menu container col-md-3">
+		    <div class="brand">Anime</div>
+		    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+		  
+		        <div class="menu-list">
+		        	<ul id="menu-content" class="menu-content collapse out ">
+		        		<li class="active">
+		        			<a href="index.html">
+		        				<i class="fa fa-dashboard fa-lg"></i> Home
+		        			</a>
+		        		</li>
+
+		        		<li>
+		        			<a href="">
+		        				<i class="fa fa-dashboard fa-lg"></i> Popular
+		        			</a>
+		        		</li>
+
+		                <li  data-toggle="collapse" data-target="#videos" class="collapsed ">
+		                	<a href="#"><i class="fa fa-gift fa-lg"></i> Video &nbsp;<span class="glyphicon glyphicon-menu-down"></span></a>
+		                </li>
+
+		                <ul class="sub-menu collapse" id="videos">
+		                	<li><a href="video.html">My video</a></li>
+		                    <li><a href="video-form.html">Add video</a></li>
+		                </ul>
+
+
+		                <li data-toggle="collapse" data-target="#service" class="collapsed">
+		                  <a href="#"><i class="fa fa-globe fa-lg"></i> Playlist &nbsp;<span class="glyphicon glyphicon-menu-down"></span></a>
+		                </li>  
+		                <ul class="sub-menu collapse" id="service">
+		                	<li><a href="list-playlist.html">My playlist</a></li>
+		                    <li><a href="playlist-form.html">Add playlist</a></li>
+		                </ul>
+		            </ul>
+		     </div>
+		</div>
+	
+	<div id="myModal" class="modal">
+		<span class="close" id="close-video">&times;</span>
+		<iframe class="modal-content" id="video-frame" width="700" height="415" 
+			      	src="" frameborder="0" allowfullscreen></iframe>
+		<div id="caption"></div>
+	</div>	
+
+	<div id="list-video"></div>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/video-playlist.js"></script>
+</body>
+</html>
